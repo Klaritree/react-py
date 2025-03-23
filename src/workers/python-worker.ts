@@ -1,4 +1,4 @@
-importScripts('https://cdn.jsdelivr.net/pyodide/v0.26.2/full/pyodide.js')
+importScripts('http://localhost:27000/pyodide/pyodide.js')
 
 import { expose } from 'comlink'
 import { loadPyodide as loadPyodideType, PyodideInterface } from 'pyodide'

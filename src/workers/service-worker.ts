@@ -27,8 +27,9 @@ addEventListener('message', (event) => {
 
 addEventListener('fetch', (event) => {
   const url = new URL(event.request.url)
-
-  if (url.pathname === '/react-py-get-input/') {
+  const regex = new RegExp('\/react-py-get-input\/');
+  const isReactPyGetInput = regex.test(url.pathname)
+  if (isReactPyGetInput) {
     const id = url.searchParams.get('id')
     const prompt = url.searchParams.get('prompt')
 
